@@ -1,0 +1,26 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.cabecalho{
+    background-image: url(../img/fundo2.png);
+    position: fixed;
+    padding: 50px 50px 30px 50px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.cabecalho h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+h2{
+    padding-top: 220px;
+    color: black;
+}
