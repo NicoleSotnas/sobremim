@@ -138,12 +138,13 @@ main {
   border-radius: 16px;
   padding: 2.5rem 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
 }
-
-.sobremim-container {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
+.sobremim:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-vermelho-ferrari);
 }
 
 .sobremim img {
@@ -182,6 +183,14 @@ main {
   border-radius: 16px;
   padding: 2.5rem 2rem;
   text-align: center;
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.contato:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-vermelho-ferrari);
 }
 
 .contato-links {
@@ -226,6 +235,18 @@ main {
   max-width: 800px;
   width: 100%;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+.feedback-secao:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-vermelho-ferrari);
+}
+
+.feedback-secao.contato:hover {
+  transform: translateY(-5px);
+  border-color: var(--cor-vermelho-ferrari);
 }
 
 .feedback-secao h2 {

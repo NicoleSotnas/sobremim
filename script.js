@@ -59,7 +59,7 @@ if (form) {
       const novoItem = document.createElement("li");
 
       // Uso de innerHTML para dar um destaque visual ao nome do usuário
-      novoItem.innerHTML = `<strong>${nomeDigitado}</strong> disse: ${comentarioDigitado}`;
+      novoItem.innerHTML = `<strong>${nomeDigitado}</strong> enviou: ${comentarioDigitado}`;
 
       // adiciona o li como filho da ul do html
       listaComentarios.appendChild(novoItem);
