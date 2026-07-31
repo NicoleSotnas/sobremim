@@ -3,28 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sobre Mim</title>
+    <link rel="stylesheet" href="css/sobremim.css" />
   </head>
   <body>
-    <header>
+    <header class="cabecalho">
+      <h1>
+        <a href="#home">Scuderia <span>Ferrari</span></a>
+      </h1>
       <nav>
         <ul>
+          <li><a href="formula1.html">Home</a></li>
           <li><a href="#sobremim">Sobre Mim</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
     <main id="sobremim">
-        <!-- Seção Sobre Mim -->
+      <!-- Seção Sobre Mim -->
       <section id="sobremim" class="sobremim">
         <h2>Sobre Mim</h2>
+        <img src="img/perfil.jpeg" alt="Minha Foto de Perfil">
         <div class="perfil">
           <p><strong>Nome:</strong> Nicole Santos</p>
           <p><strong>Idade:</strong> 19 anos</p>
           <p><strong>Cidade:</strong> Rio de Janeiro - RJ</p>
           <p class="ocupacao">
-            <strong>Ocupação:</strong> Atualmente estudo Engenharia de Software e
-            Desenvolvimento Fullstack pelo Programa Autonomia e Renda pela
+            <strong>Ocupação:</strong> Atualmente estudo Engenharia de Software
+            e Desenvolvimento Fullstack pelo Programa Autonomia e Renda pela
             Firjan em parceria com a Petrobras.
           </p>
         </div>
@@ -36,12 +42,15 @@
           <a href="mailto:niicole.santosm@gmail.com" class="btn-contato">
             📧 niicole.santosm@gmail.com
           </a>
-          <a href="https://github.com/NicoleSotnas" target="_blank" rel="noopener noreferrer" class="btn-contato">
+          <a
+            href="https://github.com/NicoleSotnas"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-contato"
+          >
             💻 GitHub
           </a>
-          <div class="telefone">
-            📱 (21) 96979-7838
-          </div>
+          <div class="telefone">📱 (21) 96979-7838</div>
         </div>
       </section>
     </main>
@@ -49,5 +58,6 @@
     <footer class="rodape">
       <p>&copy; 2026 Nicole Santos. Todos os direitos reservados.</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
