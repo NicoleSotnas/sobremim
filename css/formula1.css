@@ -24,9 +24,6 @@ body {
   line-height: 1.6;
   padding-top: 80px;
 }
-/* ==========================================================================
-   ANIMAÇÃO SCROLL REVEAL
-   ========================================================================== */
 
 /* Estado inicial (oculto e levemente deslocado para baixo) */
 .revelar {
