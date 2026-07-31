@@ -62,7 +62,11 @@ body {
   z-index: 1000;
   border-bottom: 1px solid var(--cor-borda);
 }
-
+.cabecalho img {
+  max-height: 45px;
+  width: auto;
+  object-fit: contain;
+}
 .cabecalho h1 a {
   font-size: 1.4rem;
   font-weight: 800;
@@ -193,11 +197,13 @@ details {
   border-radius: 8px;
   padding: 1.2rem;
   cursor: pointer;
+  
 }
 details:hover {
   transition:
     background-color 0.3s ease,
     transform 0.2s ease;
+    
 }
 summary {
   font-weight: bold;
@@ -208,6 +214,7 @@ summary {
 summary:hover {
   color: var(--cor-amarelo-destaque);
   transform: scale(1.05);
+  
 }
 details p {
   margin: 1rem 0;

@@ -68,6 +68,11 @@ body {
   z-index: 1000;
   border-bottom: 1px solid var(--cor-borda);
 }
+.cabecalho img {
+  max-height: 45px;
+  width: auto;
+  object-fit: contain;
+}
 
 .cabecalho h1 a {
   font-size: 1.4rem;
@@ -188,8 +193,7 @@ main {
   margin: 0 auto;
 }
 
-.btn-contato,
-.telefone {
+.btn-contato {
   width: 100%;
   padding: 1rem 1.5rem;
   background-color: #0e0e0e;
@@ -213,9 +217,128 @@ main {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
 }
-.telefone {
-  cursor: default;
-  color: var(--cor-texto-mutado);
+.feedback-secao {
+  background-color: var(--cor-card, #1a1a1a);
+  border: 1px solid var(--cor-borda, #2a2a2a);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  margin: 3rem auto;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.feedback-secao h2 {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  color: var(--cor-vermelho-ferrari, #e50914);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.form-feedback {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.campo label {
+  color: var(--cor-texto, #f1f1f1);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  background-color: #0e0e0e;
+  border: 1px solid var(--cor-borda, #2a2a2a);
+  border-radius: 8px;
+  color: var(--cor-texto, #f1f1f1);
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--cor-vermelho-ferrari, #e50914);
+  box-shadow: 0 0 8px rgba(229, 9, 20, 0.4);
+}
+
+.btn-enviar {
+  background-color: var(--cor-vermelho-ferrari, #e50914);
+  color: #ffffff;
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.btn-enviar:hover {
+  background-color: #b30009;
+  transform: translateY(-2px);
+}
+
+.mensagem-status {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  min-height: 24px;
+}
+
+/* LISTA DE COMENTÁRIOS */
+.comentarios-container {
+  margin-top: 2.5rem;
+  border-top: 1px solid var(--cor-borda, #2a2a2a);
+  padding-top: 1.5rem;
+}
+
+.comentarios-container h3 {
+  font-size: 1.3rem;
+  color: var(--cor-amarelo-destaque, #e4f805);
+  margin-bottom: 1rem;
+}
+
+.lista-comentarios {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.lista-comentarios li {
+  background-color: #0e0e0e;
+  border-left: 4px solid var(--cor-vermelho-ferrari, #e50914);
+  padding: 1rem 1.2rem;
+  border-radius: 0 8px 8px 0;
+  color: var(--cor-texto-mutado, #a0a0a0);
+  word-break: break-word; /* Evita que textos longos quebrem o layout no celular */
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.lista-comentarios li strong {
+  color: #ffffff;
 }
 
 .rodape {
@@ -227,7 +350,23 @@ main {
   font-size: 0.9rem;
   margin-top: 3rem;
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
+/* RESPONSIVIDADE */
+@media (max-width: 480px) {
+  .feedback-secao {
+    padding: 1.8rem 1.2rem;
+  }
+}
 @media (min-width: 769px) {
   /* Layout lado a lado da foto e texto em telas grandes */
   .sobremim-conteudo {
